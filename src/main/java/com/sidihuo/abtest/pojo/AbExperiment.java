@@ -21,22 +21,22 @@ public class AbExperiment extends BasePOJO {
 	
 	
 	/**
-	 * 试验配置分流取模0~24对应的版本号
+	 * 试验配置分流取模0~24对应的版本号（必須5位字符）
 	 */
 	private String ratioVersion25;
 	
 	/**
-	 * 试验配置分流取模25~49对应的版本号
+	 * 试验配置分流取模25~49对应的版本号（必須5位字符）
 	 */
 	private String ratioVersion50;
 	
 	/**
-	 * 试验配置分流取模50~74对应的版本号
+	 * 试验配置分流取模50~74对应的版本号（必須5位字符）
 	 */
 	private String ratioVersion75;
 	
 	/**
-	 * 试验配置分流取模75~99对应的版本号
+	 * 试验配置分流取模75~99对应的版本号（必須5位字符）
 	 */
 	private String ratioVersion100;
 	
@@ -78,7 +78,8 @@ public class AbExperiment extends BasePOJO {
 	}
 
 	/**
-	 * @param ratioVersion25 the ratioVersion25 to set
+	 * @param ratioVersion25
+	 *            the ratioVersion25 to set 试验配置分流取模0~24对应的版本号（必須5位字符）
 	 */
 	public void setRatioVersion25(String ratioVersion25) {
 		this.ratioVersion25 = ratioVersion25;
@@ -92,7 +93,8 @@ public class AbExperiment extends BasePOJO {
 	}
 
 	/**
-	 * @param ratioVersion50 the ratioVersion50 to set
+	 * @param ratioVersion50
+	 *            the ratioVersion50 to set 试验配置分流取模25~49对应的版本号（必須5位字符）
 	 */
 	public void setRatioVersion50(String ratioVersion50) {
 		this.ratioVersion50 = ratioVersion50;
@@ -106,7 +108,8 @@ public class AbExperiment extends BasePOJO {
 	}
 
 	/**
-	 * @param ratioVersion75 the ratioVersion75 to set
+	 * @param ratioVersion75
+	 *            the ratioVersion75 to set 试验配置分流取模50~74对应的版本号（必須5位字符）
 	 */
 	public void setRatioVersion75(String ratioVersion75) {
 		this.ratioVersion75 = ratioVersion75;
@@ -120,7 +123,8 @@ public class AbExperiment extends BasePOJO {
 	}
 
 	/**
-	 * @param ratioVersion100 the ratioVersion100 to set
+	 * @param ratioVersion100
+	 *            the ratioVersion100 to set 试验配置分流取模75~99对应的版本号（必須5位字符）
 	 */
 	public void setRatioVersion100(String ratioVersion100) {
 		this.ratioVersion100 = ratioVersion100;
