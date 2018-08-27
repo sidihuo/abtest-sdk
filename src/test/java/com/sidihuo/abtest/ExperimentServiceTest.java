@@ -31,7 +31,7 @@ public class ExperimentServiceTest extends AbTestCacheService<AbExperiment> {
 			abExperiment = new AbExperiment();
 			abExperiment.setExperimentID(key);
 			abExperiment.setExperimentName("测试实验Test");
-			// 分流比各版本各占40%流量
+			// 分流比各版本各占25%流量
 			abExperiment.setRatioVersion25("AAAAA");
 			abExperiment.setRatioVersion50("BBBBB");
 			abExperiment.setRatioVersion75("CCCCC");

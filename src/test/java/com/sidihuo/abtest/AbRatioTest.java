@@ -57,7 +57,7 @@ public class AbRatioTest {
 		double numC = map.get("C");
 		double numD = map.get("D");
 
-		System.out.println("验证了 分流比各版本各占40%流量");
+		System.out.println("验证了 分流比各版本各占25%流量");
 		System.out.println("A: " + numA / num + "\nB: " + numB / num
 
 				+ "\nC: " + numC / num + "\nD: " + numD / num);
