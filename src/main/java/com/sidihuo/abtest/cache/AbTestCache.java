@@ -74,7 +74,7 @@ public class AbTestCache<POJO, Service extends AbTestCacheService<POJO>> {
 
 		this.cache = createCache();
 
-		logger.info("create cache finished");
+		logger.info("create cache finished , cache data soure service = {}", service.getClass());
 	}
 
 	private LoadingCache<String, POJO> createCache() {

@@ -25,7 +25,7 @@ public abstract class AbTestCacheService<POJO> {
 
 	public final POJO select(String key) {
 		POJO pojo = doSelect(key);
-		logger.info("selected result: key={},value={}, \n Next begin valid ...", key, pojo);
+		logger.info("selected result: key={},value={}, Next begin valid ...", key, pojo);
 		pojo = valid(pojo);
 		if (pojo == null) {
 			pojo = createInstance();

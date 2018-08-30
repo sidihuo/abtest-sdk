@@ -19,14 +19,6 @@ public class AbTestCacheRemovalListener implements RemovalListener<Object, Objec
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * com.google.common.cache.RemovalListener#onRemoval(com.google.common.cache.
-	 * RemovalNotification)
-	 */
-	@Override
 	public void onRemoval(RemovalNotification<Object, Object> notification) {
 		String removedNotification = String.format("key=%s,value=%s,reason=%s", notification.getKey(),
 				notification.getValue(),

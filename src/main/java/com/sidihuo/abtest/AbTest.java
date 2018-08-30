@@ -76,7 +76,12 @@ public class AbTest {
 				experimentExpireTime, experimentMaximumSize);
 		whitelistCache = new AbTestCache<Map<String, AbWhitelist>, AbTestCacheService<Map<String, AbWhitelist>>>(
 				whitelistService, whitelistExpireTime, whitelistMaximumSize);
-		logger.info("AbTest construct success");
+
+		logger.info("\n"
+
+				+ "*******************************************************************\n"
+				+ "**                AbTest construct success                       **\n"
+				+ "*******************************************************************");
 	}
 
 	/**
@@ -115,10 +120,8 @@ public class AbTest {
 			logger.warn("AbTest Exception", e);
 		}
 		long timeConsume = System.currentTimeMillis() - startTime;
-		logger.info(
-				"\n###AbTest Request: experimentID={},clientID={},domain={};\n###Response={};\n###TimeConsume={}ms\n",
-				experimentID, clientID, domain,
-				abTestResponse, timeConsume);
+		logger.info("AbTest Request: experimentID={},clientID={},domain={};\nAbTest★★★Response={};\nTimeConsume={}ms",
+				experimentID, clientID, domain, abTestResponse, timeConsume);
 		return abTestResponse;
 	}
 

@@ -12,6 +12,7 @@ import sun.misc.BASE64Encoder;
  * @author XiaoGang
  *
  */
+@SuppressWarnings("restriction")
 public class ABTestUtil {
  
 	/**

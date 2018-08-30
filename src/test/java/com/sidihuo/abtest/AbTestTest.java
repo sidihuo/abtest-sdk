@@ -2,6 +2,7 @@ package com.sidihuo.abtest;
 
 
 import java.util.Map;
+import java.util.UUID;
 
 import org.junit.Before;
 import org.junit.FixMethodOrder;
@@ -41,6 +42,8 @@ public class AbTestTest {
 		testExpNoWhite();
 
 		testErrorExpNoWhite();
+
+		// testNoExps();
 	}
 
 	public void testNoExpNoWhite() {
@@ -71,6 +74,17 @@ public class AbTestTest {
 			logger.info("-------------->" + i + "_" + abTestResponse);
 		}
 		logger.info("\n 测试有试验号(不合法)+无白名单========================================end \n");
+	}
+
+	public void testNoExps() {
+		logger.info("\n 测试随机试验号攻击");
+		for (int i = 0; i < 10; i++) {
+			AbTestResponse abTestResponse = abTest.getAbTestResponse(UUID.randomUUID().toString(),
+					UUID.randomUUID().toString(), null);
+			logger.info("-------------->" + i + "_" + abTestResponse);
+		}
+		// 如果使用随机试验号攻击，会导致本地缓存数量达到上限，正常实验缓存也会消失
+		logger.info("\n 测试随机试验号攻击========================================end \n");
 	}
 
 
