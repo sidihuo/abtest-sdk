@@ -37,6 +37,10 @@ public class AbRatioTest {
 
 	@Test
 	public void test() {
+		testRatio();
+	}
+
+	public void testRatio() {
 
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		map.put("A", 0);

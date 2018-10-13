@@ -1,8 +1,6 @@
 package com.sidihuo.abtest.util;
 import java.security.MessageDigest;
 
-import org.springframework.util.StringUtils;
-
 import com.sidihuo.abtest.exception.AbTestException;
 
 import sun.misc.BASE64Encoder;
@@ -12,7 +10,6 @@ import sun.misc.BASE64Encoder;
  * @author XiaoGang
  *
  */
-@SuppressWarnings("restriction")
 public class ABTestUtil {
  
 	/**
@@ -23,7 +20,7 @@ public class ABTestUtil {
 	 * @return 新字符串
 	 */
 	public static String encodeMD5(String str) {
-		if (StringUtils.isEmpty(str)) {
+		if (str == null || str.equals("")) {
 			throw new AbTestException("can not encodeMD5 empty string");
 		}
 		try {
@@ -45,7 +42,7 @@ public class ABTestUtil {
 	 * @return
 	 */
 	public static int hashAndModulo(String str, int baseModulo) {
-		if (StringUtils.isEmpty(str)) {
+		if (str == null || str.equals("")) {
 			throw new AbTestException("can not hashAndModulo empty string");
 		}
 		if (baseModulo <= 0) {

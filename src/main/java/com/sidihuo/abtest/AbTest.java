@@ -7,7 +7,6 @@ import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.util.StringUtils;
 
 import com.sidihuo.abtest.cache.AbTestCache;
 import com.sidihuo.abtest.exception.AbTestException;
@@ -134,7 +133,7 @@ public class AbTest {
 	 */
 	private VersionResult getVersion(String experimentID, String clientID, String domain) {
 		// 校验必传参数
-		if (StringUtils.isEmpty(experimentID) || StringUtils.isEmpty(clientID)) {
+		if (experimentID == null || experimentID.equals("") || clientID == null || clientID.equals("")) {
 			throw new AbTestException("experimentID and clientID can not be empty");
 		}
 		// 校验实验是否存在
