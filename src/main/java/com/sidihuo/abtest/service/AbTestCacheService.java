@@ -8,7 +8,6 @@ import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.util.StringUtils;
 
 import com.alibaba.fastjson.JSON;
 import com.sidihuo.abtest.pojo.AbExperiment;
@@ -83,8 +82,8 @@ public abstract class AbTestCacheService<POJO> {
 			String clientIDValue = abWhitelist.getClientID();
 			String experimentID = abWhitelist.getExperimentID();
 			String version = abWhitelist.getVersion();
-			if (!clientID.equals(clientIDValue) || StringUtils.isEmpty(clientIDValue)
-					|| StringUtils.isEmpty(experimentID) || StringUtils.isEmpty(version)) {
+			if (!clientID.equals(clientIDValue) || clientIDValue == null || clientIDValue.equals("")
+					|| experimentID == null || experimentID.equals("") || version == null || version.equals("")) {
 				logger.warn("validAbWhitelists value para is empty={}, and set pojo null",
 						JSON.toJSONString(abWhitelists));
 				return false;
@@ -101,10 +100,10 @@ public abstract class AbTestCacheService<POJO> {
 		String ratioVersion50 = abExperiment.getRatioVersion50();
 		String ratioVersion75 = abExperiment.getRatioVersion75();
 		String ratioVersion100 = abExperiment.getRatioVersion100();
-		if (StringUtils.isEmpty(abExperiment.getExperimentID()) || StringUtils.isEmpty(ratioVersion25)
-				|| StringUtils.isEmpty(ratioVersion50)
-				|| StringUtils.isEmpty(ratioVersion75)
-				|| StringUtils.isEmpty(ratioVersion100)) {
+		String experimentID = abExperiment.getExperimentID();
+		if (experimentID == null || experimentID.equals("") || ratioVersion25 == null || ratioVersion25.equals("")
+				|| ratioVersion50 == null || ratioVersion50.equals("") || ratioVersion75 == null
+				|| ratioVersion75.equals("") || ratioVersion100 == null || ratioVersion100.equals("")) {
 			logger.warn("validAbExperiment para empty={}, and set pojo null", abExperiment);
 			return false;
 		}
