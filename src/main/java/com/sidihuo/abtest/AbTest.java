@@ -5,9 +5,6 @@ package com.sidihuo.abtest;
 
 import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.sidihuo.abtest.cache.AbTestCache;
 import com.sidihuo.abtest.exception.AbTestException;
 import com.sidihuo.abtest.pojo.AbExperiment;
@@ -16,6 +13,8 @@ import com.sidihuo.abtest.pojo.VersionResult;
 import com.sidihuo.abtest.service.AbTestCacheService;
 import com.sidihuo.abtest.util.ABTestUtil;
 import com.sidihuo.abtest.util.VersionUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author XiaoGang
@@ -68,8 +67,8 @@ public class AbTest {
 	 *            缓存最大实验个数 (一个实验对应一个Map白名单缓存，查询白名单是先查询此实验的所有白名单，在查询这些白名单包含客户ID与否)
 	 */
 	public AbTest(AbTestCacheService<AbExperiment> experimentService, long experimentExpireTime,
-			long experimentMaximumSize, AbTestCacheService<Map<String, AbWhitelist>> whitelistService,
-			long whitelistExpireTime, long whitelistMaximumSize) {
+                  long experimentMaximumSize, AbTestCacheService<Map<String, AbWhitelist>> whitelistService,
+                  long whitelistExpireTime, long whitelistMaximumSize) {
 		super();
 		experimentCache = new AbTestCache<AbExperiment, AbTestCacheService<AbExperiment>>(experimentService,
 				experimentExpireTime, experimentMaximumSize);
