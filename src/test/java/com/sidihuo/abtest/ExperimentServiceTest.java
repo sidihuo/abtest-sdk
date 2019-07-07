@@ -60,7 +60,7 @@ public class ExperimentServiceTest extends AbTestCacheService<AbExperiment> {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.sidihuo.abtest.service.AbTestCacheService#getPOJOClass()
+	 * @see AbTestCacheService#getPOJOClass()
 	 */
 	@Override
 	protected Class<?> getPOJOClass() {

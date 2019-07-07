@@ -6,6 +6,7 @@ package com.sidihuo.abtest.cache;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+import com.sidihuo.abtest.service.AbTestCacheService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,7 +15,6 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.cache.RemovalListener;
 import com.google.common.cache.RemovalListeners;
-import com.sidihuo.abtest.service.AbTestCacheService;
 
 /**
  * 

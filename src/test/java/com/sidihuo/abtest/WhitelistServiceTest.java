@@ -50,7 +50,7 @@ public class WhitelistServiceTest extends AbTestCacheService<Map<String, AbWhite
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.sidihuo.abtest.service.AbTestCacheService#getPOJOClass()
+	 * @see AbTestCacheService#getPOJOClass()
 	 */
 	@Override
 	protected Class<?> getPOJOClass() {
