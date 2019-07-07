@@ -37,13 +37,13 @@ public class AbTestTest {
 	@Test
 	public void test() {
 
-		// testNoExpNoWhite();
+		 testNoExpNoWhite();
 
-		// testExpNoWhite();
+		 testExpNoWhite();
 
-		// testErrorExpNoWhite();
+		 testErrorExpNoWhite();
 
-		// testNoExps();
+		 testNoExps();
 	}
 
 	public void testNoExpNoWhite() {
